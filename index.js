@@ -1,9 +1,10 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let='votingAge';
-if ('votingAge' > 18);
-
+let votingAge = 20
+if(votingAge > 18){
+    console.log('vote now!')
+};
 
 
 
@@ -21,15 +22,18 @@ if ('votingAge' > 18);
 
 //Task d: Write a function to multiply a*b 
 
-function multiply(num1*num2)
-
+function multiply(num1,num2){
+    return num1 * num2;
+}
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+function times(person){
+    return person*7;
+}
 
 
 
@@ -51,6 +55,29 @@ function multiply(num1*num2)
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function feeder(dogA, dogW){
+    if(dogA>=1 && dogW === 1||dogW === 2||dogW === 3||dogW === 4||dogW === 5){
+    return dogW*.05
+    }
+    else if(dogA>=1 && dogW === 6||dogW === 7||dogW === 8||dogW === 9||dogW === 10){
+        return dogW*0.04
+    }
+    else if(dogA>=1 && dogW === 11||dogW === 12||dogW === 13||dogW === 14||dogW === 15){
+        return dogW*0.03
+    }
+    else if(dogA>=1, dogW>15){
+        return dogW*0.02
+    }
+    else if(dogA === 0.16||dogA ===  0.25||dogA ===  0.33){
+        return dogA*0.10
+    }
+    else if(dogA === 0.33||dogA ===  0.41||dogA ===  0.50||dogA ===  0.58){
+        return dogA*0.05
+    }
+    else if(dogA === .67||dogA ===  .75||dogA ===  .83||dogA ===  .92){
+        return dogA*0.04
+    }
+}
 
 
 

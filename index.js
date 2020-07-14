@@ -16,7 +16,8 @@ if(votingAge > 18){
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let C = "1999"
+C*1
 
 
 
@@ -68,13 +69,13 @@ function feeder(dogA, dogW){
     else if(dogA>=1, dogW>15){
         return dogW*0.02
     }
-    else if(dogA === 0.16||dogA ===  0.25||dogA ===  0.33){
+    else if(dogA >= 0.16||dogA <=  0.33){ 
         return dogA*0.10
     }
-    else if(dogA === 0.33||dogA ===  0.41||dogA ===  0.50||dogA ===  0.58){
+    else if(dogA >= 0.33||dogA <=  0.58){
         return dogA*0.05
     }
-    else if(dogA === .67||dogA ===  .75||dogA ===  .83||dogA ===  .92){
+    else if(dogA >= .67||dogA <= .92){
         return dogA*0.04
     }
 }
@@ -88,14 +89,32 @@ function feeder(dogA, dogW){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+// 1=rock 2=paper 3=scissors
+  const player = 1||2||3;
+  const cpu =  Math.floor(Math.random()*3) + 1;
+  function game(player,cpu){
+      if(player === 1 && cpu === 3 || player === 2 && cpu === 1 || player === 3 && cpu === 2){
+          console.log('Player wins')
+      }
 
-  
+      else if( player === 1 && cpu === 2 || player === 2 && cpu === 3 || player === 3 && cpu === 1){
+          console.log('CPU wins')
+      }
+
+      else if(player === 1 && cpu === 1 || player === 2 && cpu === 2 || player === 3 && cpu === 3){
+          console.log('Tie')
+      }
+  }
+   
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function convert(KM){
+    return KM/1.609;
+}
 
 
 

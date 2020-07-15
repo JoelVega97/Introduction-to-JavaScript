@@ -10,7 +10,11 @@ if(votingAge > 18){
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+let one = 'true'
+let two = 'false'
+if(two==='false'){
+    
+}
 
 
 
@@ -89,6 +93,7 @@ function feeder(dogA, dogW){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+
 // 1=rock 2=paper 3=scissors
   const player = 1||2||3;
   const cpu =  Math.floor(Math.random()*3) + 1;
@@ -112,7 +117,7 @@ function feeder(dogA, dogW){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function convert(KM){
+function convert(km){
     return KM/1.609;
 }
 
@@ -121,7 +126,9 @@ function convert(KM){
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function convert(ft){
+    return ft*30.48
+}
 
 
 
@@ -129,23 +136,45 @@ function convert(KM){
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
 
-
-
+function annoyingSong(b){
+    while(b-1){
+        const c = b-1
+        console.log(b+ 'bottles of soda on the wall' + b + 'bottles of soda, take one down pass it around you have' + c + 'bottles of soda on the wall')
+    b--
+    if(b===1)
+            console.log('No more bottles of soda on the wall')
+        
+       
+    }  
+}
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
 //90s should be A 
 //80s should be B 
-//70s should be Cs 
+//70s should be C 
 //60s should be D 
 //and anything below 60 should be F
   
-
-  
-  
+function Grader(g){
+    if(g<=100 && g>=90){
+        console.log('A')
+    }
+    else if(g<=89 && g>=80){
+        console.log('B')
+    }
+    else if(g<=79 && g>=70){
+        console.log('C')
+    }
+    else if(g<=69 && g>=60){
+        console.log('D')
+    }
+    else if(g<59){
+        console.log('F')
+    }
+}
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
@@ -159,8 +188,4 @@ function convert(KM){
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
 
